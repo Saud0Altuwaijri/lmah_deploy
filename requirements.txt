@@ -1,4 +1,4 @@
 streamlit==1.25.0
-opencv-python==4.8.0.76
+opencv-python-headless==4.8.0.76  # Use headless version as it doesn't require GUI dependencies
 ultralytics==8.0.140
-Pillow==9.2.0
+Pillow==9.1.0  # Use an older version to avoid build issues with zlib
