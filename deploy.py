@@ -13,7 +13,7 @@ st.title('LMAH')
 
 st.markdown("##### **LMAH** is a project aimed at reducing the waiting time for emergency vehicles at traffic signals using artificial intelligence, computer vision, and YOLO technology. By identifying emergency vehicles, the system automatically changes the traffic light to green, ensuring a quicker response.")
 # Load your pre-trained YOLO model
-model = YOLO(r"yolov8_fine_tuned_model.pt")
+model = YOLO("yolov8_fine_tuned_model.pt")
 
 # Confidence threshold
 confidence_threshold = 0.6
@@ -46,7 +46,7 @@ def display_virtual_video(video_path, placeholder):
         time.sleep(0.03)
     
 
-virtual_video_1 = r"predict-lmah-model.mp4"
+virtual_video_1 = "predict-lmah-model.mp4"
 virtual_video_placeholder_1 = st.empty()
 display_virtual_video(virtual_video_1, virtual_video_placeholder_1)
 
@@ -97,7 +97,7 @@ st.markdown('#### Emergency Vehicle Before And After LMAH!')
 
 # Virtual video paths (use paths to your actual video files)
 
-virtual_video_2 = r"yolo_before_and_after.mp4"
+virtual_video_2 = "yolo_before_and_after.mp4"
 virtual_video_placeholder_2 = st.empty()
 display_virtual_video(virtual_video_2, virtual_video_placeholder_2)
 
@@ -110,6 +110,6 @@ st.markdown('#### Opening traffic signals for emergency vehicles can disrupt nor
 
 st.write("### Video Before And After Reinforcement Learing (RL)")
 
-virtual_video_3 = r"RL_before_and_after.mp4"
+virtual_video_3 = "RL_before_and_after.mp4"
 virtual_video_placeholder_3 = st.empty()
 display_virtual_video(virtual_video_3, virtual_video_placeholder_3)
